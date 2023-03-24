@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<div class="section">
+
+    <h2>Hi {{ name }}!</h2>
+    <p>Let's find your daily moodscape.</p>
+    <p>To get started click start below</p>
+    <a href="/start"><button id="startButton" class="btn btn-primary buttonColor">START</button></a>
+</div>
+{% endblock %}

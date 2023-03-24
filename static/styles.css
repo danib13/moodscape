@@ -1,0 +1,79 @@
+/* Size for brand */
+
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Nav bar colors */
+.bg-custombar
+{
+    background-color: #95B1F1;
+}
+
+/* Header font & Colors */
+h2 {
+    font-family: impact, sans-serif;
+    color: #7E95CB;
+}
+
+/* Link Colors */
+a {
+    color: #F1A795;
+}
+
+.buttonColor {
+    background-color: #A795F1;
+    color: white;
+}
+
+.section {
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+}
+
+table {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: transparent;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+table th,
+table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: rgb(241, 149, 177, 0.3)
+}
+
+.musicplayer {
+    display: inline-block;
+    background-color: rgb(241, 149, 177, 0.3);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    border-radius:12px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.imagecontainer {
+    height:4rem;
+    width:4rem;
+    object-fit: contain;
+    margin: 0;
+    border-radius: 360px;
+}

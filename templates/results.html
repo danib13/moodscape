@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block main %}
+<div class="section">
+
+    <h2 >Your Mood Board</h2>
+    <p>Here are some reccomendations based on your status: <b style="color: #A795F1;">{{ weather }}</b></p>
+    <div class="musicplayer" style="color: #6B6E70;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Album</th>
+                    <th>Song</th>
+                    <th>Genre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TODO: Loop through the database entries to display them in this table -->
+                <ul id="songs">
+                    {% for song in songs %}
+                        <tr>
+                            <td>
+                                <div class="imagecontainer">
+                                    <img src={{ song["image"]["url"] }} style="border-radius: 125px;">
+                                </div>
+                            </td>
+                            <td align="left">
+                                <b>{{ song["title"] }}</b>
+                                <br>
+                                {{ song["artist"] }}
+                            </td>
+                            <td>{{ song["genre"] }}</td>
+                        </tr>
+                    {% endfor %}
+                </ul>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

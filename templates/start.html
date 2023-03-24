@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Start
+{% endblock %}
+
+{% block main %}
+    <h2>What's the weather like?</h2>
+    <form action="/start" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="location" name="location" placeholder="Location" type="text">
+        </div>
+        <P>OR</P>
+        <div class="mb-3">
+            <select id="weather" name="weather">
+                    <option disabled selected>Weather</option>
+                    {% for weather in weatherTypes %}
+                        <option value="{{ weather["weather"] }}">{{ weather["weather"] }}</option>
+                    {% endfor %}
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

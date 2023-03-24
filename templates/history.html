@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<div class="section">
+
+    <h2>Your Past Moods</h2>
+    <p>Can't remember that song you liked? <b>Let's find it below ~~</b></p>
+    <div class="musicplayer" style="color: #6B6E70;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Songs</th>
+                    <th>Artist</th>
+                    <th>Genre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TODO: Loop through the database entries to display them in this table -->
+                <ul id="songs">
+                    {% for song in history %}
+                        <tr>
+                            <td>{{ song["title"] }}</td>
+                            <td>{{ song["artist"] }}</td>
+                            <td>{{ song["genre"] }}</td>
+                        </tr>
+                    {% endfor %}
+                </ul>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
